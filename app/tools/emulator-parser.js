@@ -1,17 +1,26 @@
 var fs = require('fs');
-fs.readFile("../../Atari 2600.cfg", "utf-8", function(error, data) {
-    var json = {};
-    json["artwork"] = [];
+
+exports.parseEmulatorConfig = function(filename) {
+
+    let config = {};
+    config["artwork"] = [];
+    config["romext"] = [];
+
+    var data = fs.readFileSync(filename, "utf-8");
+
     for(var i=0; i < data.split('\n').length; i++) {
         line = data.split('\n')[i];
         if (line.startsWith("executable")) {
-            json["executable"] = line.substring("executable".length).trim();
+            config["executable"] = line.substring("executable".length).trim();
         } else if (line.startsWith("args")) {
-            json["args"] = line.substring("args".length).trim();
+            config["args"] = line.substring("args".length).trim();
         } else if (line.startsWith("rompath")) {
-            json["rompath"] = line.substring("rompath".length).trim();
+            config["rompath"] = line.substring("rompath".length).trim();
         } else if (line.startsWith("romext")) {
-            json["romext"] = line.substring("romext".length).trim();
+            romexts = line.substring("romext".length).trim().split(";");
+            for(var e=0; e < romexts.length; e++) {
+                config["romext"].push(romexts[e]);
+            }
         } else if (line.startsWith("artwork")) {
             var artwork = {};
             var type = line.substring("artwork".length).trim();
@@ -21,8 +30,8 @@ fs.readFile("../../Atari 2600.cfg", "utf-8", function(error, data) {
             var path = line.substring(line.indexOf(type.trim())+type.length);
             artwork["path"] = path.trim();
 
-            json["artwork"].push(artwork);
+            config["artwork"].push(artwork);
         }
     }
-    console.log(json);
-});
+    return config;
+}

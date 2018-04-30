@@ -7,10 +7,20 @@ const Romlist = require('../models/romlist.model.js');
  */
 exports.getRomlist = (req, res) => {
     const fct = require('../tools/romlist-parser');
-    let promise = fct.myfunction('Atari 2600.txt');
+    const emuparser = require('../tools/emulator-parser');
+    
+    let promise = fct.parseRomlist(req.params.romlist + '.txt');
     return promise.then(result => {
-        console.log(result);
-       res.send(result);
+
+        // Check what roms are available.
+        for(var i=0; i < result.length; i++) {
+            config = emuparser.parseEmulatorConfig(result[i].emulator + ".cfg");
+            result[i].available = true;
+        }
+
+        // Return the game list.
+        res.send(result);
     });
 
 };
+
