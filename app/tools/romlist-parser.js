@@ -10,8 +10,14 @@ exports.parseRomlist = function(filename) {
 
     return new Promise(function(resolve,reject) {
         rd.on('line', function(line) {
-            var arr = line.split(";");
-            games.push({name:arr[0], title:arr[1], emulator: arr[2]});
+            if(!line.startsWith("#")) {
+                var arr = line.split(";");
+                games.push({
+                            name:arr[0]
+                        , title:arr[1]
+                        , emulator: arr[2]
+                        });
+            }
         });
 
         rd.on('close', function() {

@@ -1,7 +1,6 @@
 var fs = require('fs');
 
 exports.parseEmulatorConfig = function(filename) {
-
     let config = {};
     config["artwork"] = [];
     config["romext"] = [];
