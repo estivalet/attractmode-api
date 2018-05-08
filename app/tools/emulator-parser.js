@@ -1,5 +1,10 @@
 var fs = require('fs');
+const attract = require('../../config/attractmode.config.js');
 
+/**
+ * Parse attract mode emulator config file.
+ * @param {*} filename 
+ */
 exports.parseEmulatorConfig = function(filename) {
     let config = {};
     config["artwork"] = [];
@@ -34,3 +39,49 @@ exports.parseEmulatorConfig = function(filename) {
     }
     return config;
 }
+
+/**
+ * Check availability of roms and medias configured for Attract Mode.
+ * @param {*} name 
+ * @param {*} config 
+ */
+exports.checkAvailability = (romlistEntry, config) => {
+    this.checkMediaAvailability(romlistEntry, config);
+    this.checkGameAvailability(romlistEntry, config);
+};
+
+/**
+ * Loop through all artwork.
+ * @param {*} romlistEntry 
+ * @param {*} config 
+ */
+exports.checkMediaAvailability = (romlistEntry, config) => {
+    var artworks = [];
+    var artexts = [ '.jpg', '.png', '.mp4', '.flv'];
+    for(i=0; i < config["artwork"].length; i++) {
+        var artpath = attract.GLOG + "/" + config["artwork"][i].path.replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+        for(j=0; j < artexts.length; j++) {
+            var filename = artpath + "/" + romlistEntry.name + artexts[j];
+            if(fs.existsSync(filename)) {
+                var artwork = {};
+                artwork["type"] = config["artwork"][i].type;
+                artwork["filename"] = romlistEntry.name + artexts[j];
+                artworks.push(artwork);
+                break;
+            }
+        }
+    }
+    romlistEntry.artwork = artworks;
+};
+
+/**
+ * Loop through all rom extensions and check if it is available.
+ * @param {*} romlistEntry 
+ * @param {*} config 
+ */
+exports.checkGameAvailability = (romlistEntry, config) => {
+    var rompath = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+    for(i=0; i < config["romext"].length || !romlistEntry.available; i++) {
+        romlistEntry.available = fs.existsSync(rompath + "/" + romlistEntry.name + config["romext"][i]);
+    }
+};

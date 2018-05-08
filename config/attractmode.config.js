@@ -1,3 +1,4 @@
 module.exports = {
-    HOME: 'f:/emudreams/frontends/attractmode'
+    HOME: 'f:/emudreams/frontends/attractmode',
+    GLOG: 'f:/emudreams'
 }
