@@ -46,30 +46,44 @@ exports.parseEmulatorConfig = function(filename) {
  * @param {*} config 
  */
 exports.checkAvailability = (romlistEntry, config) => {
-    this.checkMediaAvailability(romlistEntry, config);
-    this.checkGameAvailability(romlistEntry, config);
+    checkMediaAvailability(romlistEntry, config);
+    checkGameAvailability(romlistEntry, config);
 };
+
+/**
+ * Add metadata information if available under database folder inside rompath.
+ * @param {*} romlistEntry 
+ * @param {*} config 
+ */
+exports.addMetadata  = (romlistEntry, config) => {
+    var metadataFile = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/") + "/database/" + romlistEntry.name + ".json";
+    if(fs.existsSync(metadataFile)) {
+        var json = JSON.parse(fs.readFileSync(metadataFile, "utf-8"));
+        romlistEntry.description = json.description;
+        romlistEntry.genre = json.genre;
+        romlistEntry.publisher = json.publisher;
+    }
+}
 
 /**
  * Loop through all artwork.
  * @param {*} romlistEntry 
  * @param {*} config 
  */
-exports.checkMediaAvailability = (romlistEntry, config) => {
+checkMediaAvailability = (romlistEntry, config) => {
     var artworks = [];
     var artexts = [ '.jpg', '.png', '.mp4', '.flv'];
     for(i=0; i < config["artwork"].length; i++) {
         var artpath = attract.GLOG + "/" + config["artwork"][i].path.replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+        var artwork = {};
+        artwork["type"] = config["artwork"][i].type;
         for(j=0; j < artexts.length; j++) {
-            var filename = artpath + "/" + romlistEntry.name + artexts[j];
-            if(fs.existsSync(filename)) {
-                var artwork = {};
-                artwork["type"] = config["artwork"][i].type;
-                artwork["filename"] = romlistEntry.name + artexts[j];
-                artworks.push(artwork);
+            artwork["available"] = fs.existsSync(artpath + "/" + romlistEntry.name + artexts[j]);
+            if(artwork["available"]) {
                 break;
             }
         }
+        artworks.push(artwork);
     }
     romlistEntry.artwork = artworks;
 };
@@ -79,9 +93,12 @@ exports.checkMediaAvailability = (romlistEntry, config) => {
  * @param {*} romlistEntry 
  * @param {*} config 
  */
-exports.checkGameAvailability = (romlistEntry, config) => {
+checkGameAvailability = (romlistEntry, config) => {
     var rompath = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
-    for(i=0; i < config["romext"].length || !romlistEntry.available; i++) {
+    for(i=0; i < config["romext"].length; i++) {
         romlistEntry.available = fs.existsSync(rompath + "/" + romlistEntry.name + config["romext"][i]);
+        if (romlistEntry.available) {
+            break;
+        }
     }
 };

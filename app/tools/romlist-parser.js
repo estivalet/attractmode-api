@@ -3,27 +3,19 @@ var readline = require('readline');
 
 exports.parseRomlist = function(filename) {
     let games = [];
-    let rd = readline.createInterface({
-        input: fs.createReadStream(filename),
-        console: false
-    });
 
-    return new Promise(function(resolve,reject) {
-        rd.on('line', function(line) {
-            if(!line.startsWith("#")) {
-                var arr = line.split(";");
-                games.push({
-                            name:arr[0]
-                        , title:arr[1]
-                        , emulator: arr[2]
-                        });
+    if (fs.existsSync(filename)) {
+        var lines = fs.readFileSync(filename, 'utf-8').split('\n').filter(Boolean);
+        for(var i=0; i < lines.length; i++) {
+            if(!lines[i].startsWith("#")) {
+                var arr = lines[i].split(";");
+                games.push({name:arr[0], title:arr[1], emulator: arr[2]});
             }
-        });
+        }
+    }
+    return games;
+};
 
-        rd.on('close', function() {
-            var json = JSON.stringify(games);
-            resolve(games);
-        });
-        // on 'error' call reject(error)
-    });
+exports.parseCategories = (filename) => {
+   return fs.readFileSync(filename, 'utf8').trim().split(',');
 };
