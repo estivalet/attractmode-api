@@ -80,6 +80,7 @@ checkMediaAvailability = (romlistEntry, config) => {
         for(j=0; j < artexts.length; j++) {
             artwork["available"] = fs.existsSync(artpath + "/" + romlistEntry.name + artexts[j]);
             if(artwork["available"]) {
+                artwork["filename"] = artpath + "/" + romlistEntry.name + artexts[j];
                 break;
             }
         }
@@ -98,6 +99,7 @@ checkGameAvailability = (romlistEntry, config) => {
     for(i=0; i < config["romext"].length; i++) {
         romlistEntry.available = fs.existsSync(rompath + "/" + romlistEntry.name + config["romext"][i]);
         if (romlistEntry.available) {
+            romlistEntry.filename = rompath + "/" + romlistEntry.name + config["romext"][i];
             break;
         }
     }
