@@ -8,8 +8,9 @@ const attract = require('../../config/attractmode.config.js');
 exports.getRomlist = (req, res) => {
     const rlparser = require('../tools/romlist-parser');
     const emuparser = require('../tools/emulator-parser');
-    
-    let result = rlparser.parseRomlist(attract.HOME + '/romlists/' + req.params.romlist + '.txt');
+
+    // Replace "&" for Game & Watch for example.
+    let result = rlparser.parseRomlist(attract.HOME + '/romlists/' + req.params.romlist.replace(/&amp;/g, "&") + '.txt');
     for(var i=0; i < result.length; i++) {
         config = emuparser.parseEmulatorConfig(attract.HOME + '/emulators/' + result[i].emulator + '.cfg');
         emuparser.checkAvailability(result[i], config);
