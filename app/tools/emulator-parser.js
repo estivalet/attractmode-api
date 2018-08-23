@@ -95,7 +95,12 @@ checkMediaAvailability = (romlistEntry, config) => {
  * @param {*} config 
  */
 checkGameAvailability = (romlistEntry, config) => {
-    var rompath = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+    var rompath;
+    if(!config["rompath"].startsWith(attract.GLOG)) {
+        rompath = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+    } else {
+        rompath = config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+    }
     for(i=0; i < config["romext"].length; i++) {
         romlistEntry.available = fs.existsSync(rompath + "/" + romlistEntry.name + config["romext"][i]);
         if (romlistEntry.available) {
