@@ -9,9 +9,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.15",
-    "request": "^2.87.0"
+    "cookie-parser": "~1.4.3",
+    "csv": "^3.1.0",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.8",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.0.14",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "request": "^2.85.0",
+    "ssh2-sftp-client": "^2.2.1"
   }
 }

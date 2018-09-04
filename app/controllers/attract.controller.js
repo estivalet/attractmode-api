@@ -1,3 +1,6 @@
+var request = require('request');
+var async = require('async');
+
 const attract = require('../../config/attractmode.config.js');
 
 /**
@@ -37,6 +40,63 @@ async function getCollection (req, res) {
         systems.push(JSON.parse("{\"" + list[i].name + "\":" + list2.length + "}"));
     }
     res.send(systems);
+};
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.index = function(req, res) {
+    async.parallel({
+        categories: function(callback) {
+            request.get({
+                url: 'http://localhost:3002/attract/categories/all',
+            }, function(error, response, body){
+                if(error) {
+                    callback(true, '{"error":"' + error + '"}');
+                } else {
+                    callback(null, body);
+                }
+            });    
+        },
+    }, function(err, results){
+        if(err) {
+            res.render('error', { message: JSON.parse(results.systems)});
+        } else {
+            res.render('amcp', 
+                { 
+                 categories: JSON.parse(results.categories) 
+                });
+        }
+    });
+};
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.attract = function(req, res) {
+    // Send a request to ATTRACTMODE API to read the romlist for the selected system and return it.
+    console.log(req.params.systemName)
+    request.get({
+        url: 'http://localhost:3002/attract/romlist/' + req.params.systemName,
+    }, function(error, response, body){
+        var json = JSON.parse(body);
+        res.setHeader('Content-Type', 'application/json');
+        res.send(json);
+    });    
+};
+
+
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.showSystem = function(req, res) {
+    res.render('system', {name: req.params.systemName});
 };
 
 exports.getCollection = getCollection;

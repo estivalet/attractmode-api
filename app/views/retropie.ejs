@@ -1,0 +1,70 @@
+                <!-- Main row -->
+                <div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-primary shadow">
+                                <div class="box-header with-border">Send system to Retropie</div>
+                                <div class="box-body">
+                                    <form id="form" onsubmit="return false">
+    
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Host</label>
+                                                    <input type="text" name="host" id="host" class="form-control" placeholder="retropie" value="192.168.1.110">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Port</label>
+                                                    <input type="text" name="port" id="port" class="form-control" placeholder="22" value="22">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Username</label>
+                                                    <input type="text" name="username" id="username" class="form-control" placeholder="pi" value="luisoft">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input type="text" name="password" id="password" class="form-control" placeholder="raspberry" value="luisoft">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="favorites" name="favorites">Favorites Only
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="wheel" name="wheel">Wheel Art
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="box" name="box">Box Art
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="cart" name="cart">Cart Art
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="shot" name="shot">Screenshot
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="video" name="video">Video
+                                                    </label>
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" id="overwrite" name="overwrite">Overwrite
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="box-footer">
+                                    <button id="send" type="button" class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
