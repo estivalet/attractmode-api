@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AMControlCenter</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    Snapshot of <%=snapshot_date%>
+        
+<% 
+var count=4;
+systems.forEach(function(system, index) { 
+    if(index % 4== 0) {  %>
+    <div class="row">
+<%
+    }
+%>            
+        <div class="col-sm-3 col-md-2">
+            <div class="thumbnail">
+                <img src="/images/logos/<%=system.system%>.png" alt="<%=system.system%>">
+                <img src="/images/systems/<%=system.system%>.png" alt="<%=system.system%>">
+                <ul dir="rtl" class="list-group" style="color:white">
+                        <li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.games%></span>Games</li>
+                        <li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.available%></span>Available</li>
+                        <li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.favorite%></span>Favorites</li>
+<%
+    if(system.artworks) {
+%>
+<%            
+        for(var i=0; i < Object.keys(system.artworks).length; i++) {
+%>
+<li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.artworks[Object.keys(system.artworks)[i]]%></span><%=Object.keys(system.artworks)[i]%></li>
+<%
+        }
+%>
+<%             
+    }
+%>
+
+</ul>   
+
+            </div>
+        </div>
+<% 
+    if(--count == 0) {  
+        count=4;
+%>
+    </div>
+<%
+    }
+        
+}); 
+%>
+
+</body>
+
+<!-- jQuery 2.2.3 -->
+<script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/plugins/datatables/dataTables.bootstrap.min.js"></script>

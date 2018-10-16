@@ -1,5 +1,7 @@
 var request = require('request');
 var async = require('async');
+const path = require("path");
+const fs = require('fs');
 
 const attract = require('../../config/attractmode.config.js');
 
@@ -98,5 +100,19 @@ exports.attract = function(req, res) {
 exports.showSystem = function(req, res) {
     res.render('system', {name: req.params.systemName});
 };
+
+exports.offline = function(req, res) {
+    try {
+        let rawdata = fs.readFileSync(path.resolve(__dirname, '../../totals.json'));  
+        var stats = fs.statSync(path.resolve(__dirname, "../../totals.json"));
+        let systems = JSON.parse(rawdata);  
+        const filtered = systems.filter(json => json.category == req.params.category);
+        res.render('offline', { snapshot_date: stats.mtime, systems: filtered});
+    } catch(error) {
+        console.log(error);
+        res.render('error', { message: error});
+    }
+};
+
 
 exports.getCollection = getCollection;

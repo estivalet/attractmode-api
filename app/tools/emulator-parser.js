@@ -7,10 +7,15 @@ const attract = require('../../config/attractmode.config.js');
  */
 exports.parseEmulatorConfig = function(filename) {
     let config = {};
+
+    if (!fs.existsSync(filename)) {
+        console.log("WARNING " + filename + " not found!");
+        return config;
+    }
+    var data = fs.readFileSync(filename, "utf-8");
+
     config["artwork"] = [];
     config["romext"] = [];
-
-    var data = fs.readFileSync(filename, "utf-8");
 
     for(var i=0; i < data.split('\n').length; i++) {
         line = data.split('\n')[i];
