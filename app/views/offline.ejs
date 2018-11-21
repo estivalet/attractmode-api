@@ -8,11 +8,44 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <style>
+.collapse-row.collapsed + tr {
+  display: none;
+}        
+    </style>
 </head>
 
 <body>
 
     Snapshot of <%=snapshot_date%>
+
+
+    <table class="table table-hover">
+        <thead>
+            <th>System</th><th># games</th><th># available</th><th># favorites</th>
+        </thead>
+        
+        <tbody>
+<%
+systems.forEach(function(system, index) { 
+%>                
+            <tr data-toggle="collapse" data-target="#accordion" class="clickable collapse-row collapsed">
+                <td><%=system.system%></td>
+                <td><%=system.games%></td>
+                <td><%=system.available%></td>
+                <td><%=system.favorite%></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div id="accordion" class="collapse">Hidden by default</div>
+                </td>
+            </tr>
+<%
+});
+%>
+        </tbody>
+    </table>    
+<hr/>    
         
 <% 
 var count=4;
@@ -36,7 +69,7 @@ systems.forEach(function(system, index) {
 <%            
         for(var i=0; i < Object.keys(system.artworks).length; i++) {
 %>
-<li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.artworks[Object.keys(system.artworks)[i]]%></span><%=Object.keys(system.artworks)[i]%></li>
+<li class="btn btn-primary list-group-item" style="background-color:#337ab7"><span class="badge pull-left"><%=system.artworks[Object.keys(system.artworks)[i]].total%></span><%=Object.keys(system.artworks)[i]%></li>
 <%
         }
 %>

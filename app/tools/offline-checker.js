@@ -20,8 +20,9 @@ for(var r=0; r < systems.length; r++) {
         // Replace "&" for Game & Watch for example.
         let path = attract.HOME + '/romlists/' + systems[r]["system"].replace(/&amp;/g, "&") + '.txt';
         if (fs.existsSync(path)) {
+            console.log("Reading " + path);
             let result = rlparser.parseRomlist(path);
-            let available = 0;
+            let available = {total:0,missing:[]};
             let favorite = 0;
             let artworks = {};
             for(var i=0; i < result.length; i++) {
@@ -32,7 +33,9 @@ for(var r=0; r < systems.length; r++) {
                 emuparser.checkAvailability(result[i], config);
                 emuparser.addMetadata(result[i], config);
                 if(result[i].available) {
-                    available++;
+                    available.total++;
+                } else {
+                    available.missing.push(result[i].name + " from " + result[i].emulator);
                 }
                 if(result[i].favorite) {
                     favorite++;
@@ -40,13 +43,16 @@ for(var r=0; r < systems.length; r++) {
                 for(var j=0; j < result[i].artwork.length; j++) {
                     if(!artworks[result[i].artwork[j].type]) {
                         if(result[i].artwork[j].available) {
-                            artworks[result[i].artwork[j].type] = 1;
+                            artworks[result[i].artwork[j].type] = {total:1,missing:[]};
                         } else {
-                            artworks[result[i].artwork[j].type] = 0;
+                            artworks[result[i].artwork[j].type] = {total:0,missing:[result[i].name + " from " + result[i].emulator]};
+                         //   artworks[result[i].artwork[j].type]["missing"].push(result[i].name);
                         }
                     } else {
                         if(result[i].artwork[j].available) {
-                            artworks[result[i].artwork[j].type]++;
+                            artworks[result[i].artwork[j].type].total++;
+                        } else {
+                            artworks[result[i].artwork[j].type]["missing"].push(result[i].name + " from " + result[i].emulator);
                         }
                     }
                 }

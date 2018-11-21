@@ -2157,13 +2157,13 @@
   },
   {
     "system": "Coleco Telstar",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Alpha",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
@@ -2175,19 +2175,19 @@
   },
   {
     "system": "Coleco Telstar Classic",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Colormatic",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Colortron",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
@@ -2199,7 +2199,7 @@
   },
   {
     "system": "Coleco Telstar Deluxe",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
@@ -2217,25 +2217,25 @@
   },
   {
     "system": "Coleco Telstar Marksman",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Ranger",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Regent",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Coleco Telstar Sportsman",
-    "category": "",
+    "category": "Pong",
     "favorite": "",
     "subsystems": []
   },
@@ -3855,6 +3855,12 @@
   },
   {
     "system": "Halo Collection",
+    "category": "",
+    "favorite": "",
+    "subsystems": []
+  },
+  {
+    "system": "Halloween Collection",
     "category": "",
     "favorite": "",
     "subsystems": []
@@ -6237,7 +6243,7 @@
   },
   {
     "system": "Nintendo NES Zapper",
-    "category": "",
+    "category": "Lightgun",
     "favorite": "",
     "subsystems": []
   },
@@ -6299,6 +6305,12 @@
     "system": "Nintendo SNES Shmups",
     "category": "",
     "favorite": "X",
+    "subsystems": []
+  },
+  {
+    "system": "Nintendo SNES Super Scope",
+    "category": "Lightgun",
+    "favorite": "",
     "subsystems": []
   },
   {
@@ -7675,6 +7687,12 @@
     "subsystems": []
   },
   {
+    "system": "Sega Genesis Gun",
+    "category": "Lightgun",
+    "favorite": "",
+    "subsystems": []
+  },
+  {
     "system": "Sega Genesis Hacks",
     "category": "",
     "favorite": "",
@@ -7728,6 +7746,10 @@
         "category": "Consoles"
       },
       {
+        "system": "Sega Master System Gun",
+        "category": "Lightgun"
+      },
+      {
         "system": "Sega Master System Hacks",
         "category": "Hacks"
       }
@@ -7744,6 +7766,10 @@
   {
     "system": "Sega Master System Evolution",
     "category": "Consoles"
+  },
+  {
+    "system": "Sega Master System Gun",
+    "category": "Lightgun"
   },
   {
     "system": "Sega Master System Hacks",
@@ -8592,6 +8618,12 @@
   {
     "system": "Sony Playstation Beatemup",
     "category": "",
+    "favorite": "",
+    "subsystems": []
+  },
+  {
+    "system": "Sony Playstation Gun",
+    "category": "Lightgun",
     "favorite": "",
     "subsystems": []
   },
@@ -9504,6 +9536,12 @@
   {
     "system": "Tiger Handheld Electronics",
     "category": "",
+    "favorite": "",
+    "subsystems": []
+  },
+  {
+    "system": "Tiger R-Zone",
+    "category": "Handhelds",
     "favorite": "",
     "subsystems": []
   },

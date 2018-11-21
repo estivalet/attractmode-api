@@ -4,7 +4,7 @@ const csv = require('csv-parser');
 let systems = [];
 
 /** parse my google spreadsheet with systems */
-fs.createReadStream("c:/users/luisoft/Desktop/frontends2.csv")
+fs.createReadStream("c:/users/luisoft/Desktop/systems.csv")
     .pipe(csv())
     .on('data', function(data){
         try {

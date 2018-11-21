@@ -128,6 +128,12 @@
                       <span>Pack Builder</span>
                     </a>
                   </li>
+                  <li>
+                    <a id="offline">
+                      <i class="fa fa-book"></i>
+                      <span>Offline Checker</span>
+                    </a>
+                  </li>
                 </ul>
             </section>
         <!-- /.sidebar -->
@@ -166,17 +172,32 @@
 
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="box box-primary shadow">
+                            <div class="box-header with-border">Missing Games/Media for <span id="frontend"></span></div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="missingDiv"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
                         <div id="gamesPerSystem"></div>
                     </div>
                 </div>
             </section>
         </div>
-
+<!--
         <footer class="main-footer">
             <div class="pull-right hidden-xs"><b>Version</b> 2.3.7</div>
             <strong>Copyright &copy; 2014-2016<a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
         </footer>
-
+-->
     </div>
   <!-- ./wrapper -->
 
@@ -280,6 +301,90 @@ function renderGamesPerSystem(emulators, data) {
 
 }
 
+function renderMissingTable(data) {
+    var missingDiv = document.getElementById("missingDiv");
+    missingDiv.innerHTML = "";
+    var tableMissing = document.createElement('TABLE');
+    tableMissing.id = 'missingTable';
+    tableMissing.border = '1';
+    tableMissing.className = 'table table-bordered table-striped';
+    var headerMissing = tableMissing.createTHead();
+    var rowMissing = headerMissing.insertRow(0);
+    rowMissing.insertCell(0).outerHTML = "<th>Name</th>";
+    rowMissing.insertCell(1).outerHTML = "<th>Emulator</th>";
+    rowMissing.insertCell(2).outerHTML = "<th>Available</th>";
+    for(var i=0; i < data[0].artwork.length; i++) {
+      rowMissing.insertCell(i+3).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
+    }
+    var tableBodyMissing = document.createElement('TBODY');
+    tableMissing.appendChild(tableBodyMissing);
+    $.each(data, function(index, element) {
+
+        // Only create a row for missing games or for a game that has a missing artwork.
+        
+        var createRow = false;
+        $.each(element.artwork, function(index, artwork) {
+          if(!artwork.available) {
+            createRow = true;
+            return;
+          }
+        });
+        
+        if(!element.available) {
+          createRow = true;
+        }
+        if(!createRow) {
+          return;
+        }
+
+        var tr = document.createElement('TR');
+        tableBodyMissing.appendChild(tr);
+
+        // Name column.
+        var td = document.createElement('TD');
+        td.appendChild(document.createTextNode(element.name));
+        tr.appendChild(td);
+
+        // Emulator column.
+        var td = document.createElement('TD');
+        td.appendChild(document.createTextNode(element.emulator));
+        tr.appendChild(td);
+
+        // Available column.
+        var td = document.createElement('TD');
+        td.setAttribute("align", "center");
+        var oImg = document.createElement("img");
+        oImg.setAttribute('src', '/dist/img/' + element.available + '.png');
+        oImg.setAttribute('height', '16px');
+        oImg.setAttribute('width', '16px');
+        td.appendChild(oImg);
+        var textSpan = document.createElement('span')
+        textSpan.innerHTML = element.available;
+        textSpan.className = "hide";
+        td.appendChild(textSpan);
+        tr.appendChild(td);
+
+        // Media columns.
+        var art = "";
+        $.each(element.artwork, function(index, artwork) {
+            var td = document.createElement('TD');
+            td.setAttribute("align", "center");
+            var oImg = document.createElement("img");
+            oImg.setAttribute('src', '/dist/img/' + artwork.available + '.png');
+            oImg.setAttribute('height', '16px');
+            oImg.setAttribute('width', '16px');
+            td.appendChild(oImg);
+            var textSpan = document.createElement('span')
+            textSpan.innerHTML = artwork.available;
+            textSpan.className = "hide";
+            td.appendChild(textSpan);
+            tr.appendChild(td);
+        });
+    });
+    missingDiv.appendChild(tableMissing);
+    var dataTable = $("#missingTable").DataTable();
+}
+
     $('#category').on('change', function() {
       $.ajax({
         url : "http://localhost:3002/attract/collection/" + this.value,
@@ -299,6 +404,7 @@ function renderGamesPerSystem(emulators, data) {
     $.ajax({
       url : "/system/" + system + "/attract",
       success : function(data) {
+        renderMissingTable(data);
         var counters = [];
         var countersFav = [];
 
@@ -334,6 +440,10 @@ function renderGamesPerSystem(emulators, data) {
 
         var tableBody = document.createElement('TBODY');
         table.appendChild(tableBody);
+
+
+
+
 
         // Store only different emulators.
         var emulators = new Set();
@@ -508,6 +618,21 @@ $('#send').on('click', function() {
       }
   });
 });
+
+   $('#offline').on('click', function() {
+     alert('ok');
+
+     return;
+      $.ajax({
+        url : "http://localhost:3002/attract/offline",
+        success : function(data) {
+          $.each(data, function(index, element) {
+            console.log(element);
+          });
+        }
+      });
+    });
+
 
   function openModal() {
         document.getElementById('modal').style.display = 'block';
