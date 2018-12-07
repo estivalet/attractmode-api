@@ -79,7 +79,7 @@ checkMediaAvailability = (romlistEntry, config) => {
     var artworks = [];
     var artexts = [ '.jpg', '.png', '.mp4', '.flv'];
     for(i=0; i < config["artwork"].length; i++) {
-        var artpath = attract.GLOG + "/" + config["artwork"][i].path.replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+        var artpath = attract.GLOG + "/" + config["artwork"][i].path.replace(/[.][.]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
         var artwork = {};
         artwork["type"] = config["artwork"][i].type;
         for(j=0; j < artexts.length; j++) {
@@ -102,7 +102,7 @@ checkMediaAvailability = (romlistEntry, config) => {
 checkGameAvailability = (romlistEntry, config) => {
     var rompath;
     if(!config["rompath"].startsWith(attract.GLOG)) {
-        rompath = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
+        rompath = attract.GLOG + "/" + config["rompath"].replace(/[.][.]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
     } else {
         rompath = config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/");
     }

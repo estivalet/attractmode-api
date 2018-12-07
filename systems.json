@@ -7,7 +7,7 @@
   },
   {
     "system": "00s Collection",
-    "category": "Years",
+    "category": "",
     "favorite": "",
     "subsystems": []
   },
@@ -547,7 +547,7 @@
   },
   {
     "system": "Allumer Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -559,7 +559,7 @@
   },
   {
     "system": "Alpha Denshi Co",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -577,7 +577,7 @@
   },
   {
     "system": "Amenip Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -811,7 +811,7 @@
   },
   {
     "system": "Aristocrat Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -987,7 +987,7 @@
   },
   {
     "system": "Atari Flashback 7",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -1149,7 +1149,7 @@
   },
   {
     "system": "Bally Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -1203,7 +1203,7 @@
   },
   {
     "system": "Bally Professional Videocade",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -1293,7 +1293,7 @@
   },
   {
     "system": "Banpresto Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -1965,7 +1965,7 @@
   },
   {
     "system": "Cave",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -2013,13 +2013,13 @@
   },
   {
     "system": "Centuri Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Century Electronics Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -2073,7 +2073,7 @@
   },
   {
     "system": "Cinematronics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -2277,7 +2277,7 @@
   },
   {
     "system": "Comad Co",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -2331,7 +2331,7 @@
   },
   {
     "system": "Commodore 64 Mini",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -2469,7 +2469,7 @@
   },
   {
     "system": "Coreland Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -2589,7 +2589,7 @@
   },
   {
     "system": "Data East Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -2841,7 +2841,7 @@
   },
   {
     "system": "Dooyong Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -3171,7 +3171,7 @@
   },
   {
     "system": "Exidy Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -3483,19 +3483,19 @@
   },
   {
     "system": "Fuuki Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
   {
     "system": "Gaelco-Demul",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Gaelco-MAME",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -3753,7 +3753,7 @@
   },
   {
     "system": "Gottlieb Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -3795,7 +3795,7 @@
   },
   {
     "system": "Gremlin Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -4047,7 +4047,7 @@
   },
   {
     "system": "Hudson Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -4119,7 +4119,7 @@
   },
   {
     "system": "IGS Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -4245,7 +4245,7 @@
   },
   {
     "system": "Irem Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -4353,7 +4353,7 @@
   },
   {
     "system": "Jaleco Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -4479,7 +4479,7 @@
   },
   {
     "system": "Kaneko Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -4575,7 +4575,7 @@
   },
   {
     "system": "Konami Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -5247,7 +5247,7 @@
   },
   {
     "system": "Metro Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -5403,7 +5403,7 @@
   },
   {
     "system": "Midway Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -5517,7 +5517,7 @@
   },
   {
     "system": "Mitchell Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -5679,7 +5679,7 @@
   },
   {
     "system": "Namco Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -5793,43 +5793,43 @@
   },
   {
     "system": "Namco TV Arcade Gold Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV Ms. Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV Pac-Man Classic Games",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV Retro Arcade Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV Super Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Namco TV wireless Ms. Pac-Man",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -6033,7 +6033,7 @@
   },
   {
     "system": "Nichibutsu",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -6075,7 +6075,7 @@
   },
   {
     "system": "Nintendo Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -6213,7 +6213,7 @@
   },
   {
     "system": "Nintendo NES Classic Edition",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -6291,7 +6291,7 @@
   },
   {
     "system": "Nintendo SNES Classic Edition",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -6357,7 +6357,7 @@
   },
   {
     "system": "NMK Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -6417,7 +6417,7 @@
   },
   {
     "system": "Orca Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -6807,7 +6807,7 @@
   },
   {
     "system": "Playmark Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -6993,7 +6993,7 @@
   },
   {
     "system": "Psikyo Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -7083,7 +7083,7 @@
   },
   {
     "system": "Raizing Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -7503,7 +7503,7 @@
   },
   {
     "system": "Saurus Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -7611,7 +7611,7 @@
   },
   {
     "system": "Sega Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -8053,7 +8053,7 @@
   },
   {
     "system": "Seibu Kaihatsu",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -8065,7 +8065,7 @@
   },
   {
     "system": "SemiCom Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -8203,7 +8203,7 @@
   },
   {
     "system": "Sigma Enterprises Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -8377,7 +8377,7 @@
   },
   {
     "system": "SNK Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -8437,7 +8437,7 @@
   },
   {
     "system": "SNK Neo Geo Mini",
-    "category": "",
+    "category": "Classic Editions",
     "favorite": "",
     "subsystems": []
   },
@@ -8905,7 +8905,7 @@
   },
   {
     "system": "Stern Electronics Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -9001,19 +9001,19 @@
   },
   {
     "system": "Sun Electronics Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "SunA Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Sunsoft Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -9109,7 +9109,7 @@
   },
   {
     "system": "TAD Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -9145,7 +9145,7 @@
   },
   {
     "system": "Taito Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -9331,7 +9331,7 @@
   },
   {
     "system": "Tatsumi Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -9355,19 +9355,19 @@
   },
   {
     "system": "Tecfri Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
   {
     "system": "Technos Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
   {
     "system": "Tecmo Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -9379,7 +9379,7 @@
   },
   {
     "system": "Tehkan Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -9601,7 +9601,7 @@
   },
   {
     "system": "Toaplan Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -9913,7 +9913,7 @@
   },
   {
     "system": "Unico Electronics Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -9937,7 +9937,7 @@
   },
   {
     "system": "Universal Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -9979,7 +9979,7 @@
   },
   {
     "system": "UPL Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -10021,7 +10021,7 @@
   },
   {
     "system": "Video System Co Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -10063,7 +10063,7 @@
   },
   {
     "system": "Visco Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -10219,7 +10219,7 @@
   },
   {
     "system": "Williams Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "X",
     "subsystems": []
   },
@@ -10405,7 +10405,7 @@
   },
   {
     "system": "Yun Sung",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },
@@ -10471,7 +10471,7 @@
   },
   {
     "system": "Zilec Electronics Classics",
-    "category": "",
+    "category": "Arcade Manufacturer",
     "favorite": "",
     "subsystems": []
   },

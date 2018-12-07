@@ -86,6 +86,9 @@
     text-align:center;
     overflow: auto;
 }    
+.name-column {
+  width:35%;
+}
     </style>
 </head>
 
@@ -154,14 +157,30 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-primary shadow">
-                            <div class="box-header with-border">Game listing for <span id="frontend"></span></div>
+                            <div class="box-header with-border">Game listing for <span id="frontend"></span> / Complete: <span id="systemComplete"></span></div>
                             <div class="box-body">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div id="systemsDiv"></div>
                                     </div>
                                 </div>
-                                <div id="info">Instruction about the filters: For "Available", "Favorite" and "Medias" columns use T (true) or F (false) for filtering.</div>
+                                <div id="info">
+                                  <p>Instruction about the filters: For "Available", "Favorite" and "Medias" columns use T (true) or F (false) for filtering.</p>
+                                  <p>All emulator config files should have set the following artworks:</p>
+                                  <li>artwork    boxart         box3d</li>
+                                  <li>artwork    cartart        media</li>
+                                  <li>artwork    flyer          boxfront | boxback | flyer</li>
+                                  <li>artwork    marquee        marquee</li>
+                                  <li>artwork    snap           video</li>
+                                  <li>artwork    wheel          logo</li>
+                                  <li>artwork    shot           ingame | mix3 | mix4</li>
+                                  <br/>
+                                  <p>The box3d, media, boxfront, boxback, flyer, marquee, video, logo, ingame, mix3, mix4 are folders inside the games/art folder for each platform.</p>
+                                  <p>If the chosen layout (theme) does not follow the above standard I may need to change it manually to reflect it.</p>
+                                  <p>About the MEDIA column in the table above: All games must have at least a shot to see how the game looks like. The shot can be replaced by the snap (video). If there is a shot or video then it will be green, otherwise red.</p>
+                                  <p>The other arts can be optional in the following order of importance: wheel, boxart, cartart, flyer, marquee.</p>
+
+                                </div>
                             </div>
                             <div class="box-footer">
                                 <div id="totals"></div>
@@ -226,7 +245,7 @@ function renderGamesPerSystem(emulators, data) {
 			gamesPerSystem.innerHTML = "";
 			var cols = 0;
 			for (let emulator of emuArr) {
-				console.log(emulator);
+				//console.log(emulator);
 				if(cols % 3 == 0) {
 				var emulatorGameListDiv = document.createElement('div');
 				emulatorGameListDiv.className = "row";
@@ -409,7 +428,7 @@ function renderMissingTable(data) {
         var countersFav = [];
 
         $("#content-wrapper").removeClass("hide");
-        $("#frontend").text('Attract Mode');
+        $("#frontend").text(system);
   
         var systemsDiv = document.getElementById("systemsDiv");
         systemsDiv.innerHTML = "";
@@ -424,9 +443,10 @@ function renderMissingTable(data) {
         row.insertCell(1).outerHTML = "<th>Emulator</th>";
         row.insertCell(2).outerHTML = "<th>Available</th>";
         row.insertCell(3).outerHTML = "<th>Favorite</th>";
-        for(var i=0; i < data[0].artwork.length; i++) {
-          row.insertCell(i+4).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
-        }
+        row.insertCell(4).outerHTML = "<th>Media</th>";
+//        for(var i=0; i < data[0].artwork.length; i++) {
+  //        row.insertCell(i+4).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
+    //    }
 
         var footer = table.createTFoot();
         var row = footer.insertRow(0);
@@ -434,9 +454,10 @@ function renderMissingTable(data) {
         row.insertCell(1).outerHTML = "<th>Emulator</th>";
         row.insertCell(2).outerHTML = "<th>Available</th>";
         row.insertCell(3).outerHTML = "<th>Favorite</th>";
-        for(var i=0; i < data[0].artwork.length; i++) {
-          row.insertCell(i+4).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
-        }
+        row.insertCell(4).outerHTML = "<th>Media</th>";
+  //  for(var i=0; i < data[0].artwork.length; i++) {
+    //      row.insertCell(i+4).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
+      //  }
 
         var tableBody = document.createElement('TBODY');
         table.appendChild(tableBody);
@@ -450,6 +471,7 @@ function renderMissingTable(data) {
         counters["total"]=0
         countersFav["total"]=0
         countersFav["available"]=0
+        var systemComplete = true;
         $.each(data, function(index, element) {
           emulators.add(element.emulator);
 
@@ -463,6 +485,7 @@ function renderMissingTable(data) {
           
           // Name column.
           var td = document.createElement('TD');
+          td.className = "name-column";
           td.appendChild(document.createTextNode(element.name));
           tr.appendChild(td);
 
@@ -480,6 +503,8 @@ function renderMissingTable(data) {
               countersFav["available"]=countersFav["available"]+1;
             }
             counters["available"] = counters["available"] + 1;
+          } else {
+            systemComplete = false;
           }
           var td = document.createElement('TD');
           td.setAttribute("align", "center");
@@ -498,7 +523,11 @@ function renderMissingTable(data) {
           var td = document.createElement('TD');
           td.setAttribute("align", "center");
           var oImg = document.createElement("img");
-          oImg.setAttribute('src', '/dist/img/' + element.favorite + '.png');
+          if(element.favorite) {
+            oImg.setAttribute('src', '/dist/img/gold-star.png');
+          } else {
+            oImg.setAttribute('src', '/dist/img/black-star.png');
+          }
           oImg.setAttribute('height', '16px');
           oImg.setAttribute('width', '16px');
           td.appendChild(oImg);
@@ -510,8 +539,12 @@ function renderMissingTable(data) {
 
           // Media columns.
           var art = "";
+          var mediaOk = false;
           $.each(element.artwork, function(index, artwork) {
             if(artwork.available) {
+              if(artwork.type == 'shot' || artwork.type == 'snap') {
+                mediaOk = true;
+              }
               if(isNaN(counters[artwork.type])) {
                 counters[artwork.type]=0;  
               }
@@ -523,6 +556,8 @@ function renderMissingTable(data) {
               }
               counters[artwork.type] = counters[artwork.type] + 1;
             }
+
+            /*
             var td = document.createElement('TD');
             td.setAttribute("align", "center");
             var oImg = document.createElement("img");
@@ -534,10 +569,35 @@ function renderMissingTable(data) {
             textSpan.innerHTML = artwork.available;
             textSpan.className = "hide";
             td.appendChild(textSpan);
-            tr.appendChild(td);
+            tr.appendChild(td);*/
           });
 
+            if(!mediaOk) {
+              systemComplete = false;
+            }
+
+            var td = document.createElement('TD');
+            td.setAttribute("align", "center");
+            var oImg = document.createElement("img");
+  					oImg.setAttribute('src', '/dist/img/' + mediaOk + '.png');
+	    			oImg.setAttribute('height', '16px');
+			    	oImg.setAttribute('width', '16px');
+            td.appendChild(oImg);
+            var textSpan = document.createElement('span')
+            textSpan.innerHTML = mediaOk;
+            textSpan.className = "hide";
+            td.appendChild(textSpan);
+            tr.appendChild(td);
+
         });
+
+        $('#systemComplete').text(systemComplete);
+        if(systemComplete) {
+          $('#systemComplete').html("<img src='/dist/img/green.png' width='16'>");
+        } else {
+          $('#systemComplete').html("<img src='/dist/img/red.png' width='16'>");
+        }
+        
 
 
         systemsDiv.appendChild(table);
@@ -569,7 +629,7 @@ function renderMissingTable(data) {
         var i = 1;
         var favLine = "<td>Favorites</td>";
         for(key in counters) {
-          console.log(i + "=" + key + " " + countersFav[key] + " " + counters[key]);
+          //console.log(i + "=" + key + " " + countersFav[key] + " " + counters[key]);
           favLine += "<td>" + (!countersFav[key]?'0':countersFav[key]) + "</td>";
           rowTotals.insertCell(i++).outerHTML = "<th>" + key + "</th>";
         }
@@ -593,6 +653,8 @@ function renderMissingTable(data) {
         totalsDiv.appendChild(tableTotals);
 
         // Only renders games per system if there are more than one system.
+        var gamesPerSystem = document.getElementById("gamesPerSystem");
+  			gamesPerSystem.innerHTML = "";
         if (emulators.size > 1) {
           renderGamesPerSystem(emulators, data);
         }
