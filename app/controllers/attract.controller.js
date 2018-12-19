@@ -114,5 +114,31 @@ exports.offline = function(req, res) {
     }
 };
 
+exports.box = function(req, res) {
+    async.parallel({
+        categories: function(callback) {
+            request.get({
+                url: 'http://localhost:3002/attract/categories/all',
+            }, function(error, response, body){
+                if(error) {
+                    callback(true, '{"error":"' + error + '"}');
+                } else {
+                    callback(null, body);
+                }
+            });    
+        },
+    }, function(err, results){
+        if(err) {
+            res.render('error', { message: JSON.parse(results.systems)});
+        } else {
+            res.render('box', 
+                { 
+                 categories: JSON.parse(results.categories) 
+                });
+        }
+    });
+};
+
+
 
 exports.getCollection = getCollection;
