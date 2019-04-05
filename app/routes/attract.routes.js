@@ -19,4 +19,6 @@ router.get('/box', attract.box);
 
 router.get('/', attract.index);
 
+router.post('/attract/game/status', attract.gameStatus);
+
 module.exports = router;

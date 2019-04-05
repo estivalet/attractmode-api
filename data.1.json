@@ -1,0 +1,334 @@
+[
+{
+    "name": "Atari 2600",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/atari2600/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari 5200",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/atari5200/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari 7800",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/atari7800/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari Lynx",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/atarilynx/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Sufami Turbo",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/sufami/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Wonderswan",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/wonderswan/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Wonderswan Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/wonderswancolor/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Coleco Colecovision",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/coleco/",
+    "romExtensions": ["zip"],
+    "bios": ["coleco.rom"]
+ },
+ {
+    "name": "Game &amp; Watch",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/gameandwatch/",
+    "romExtensions": ["mgw"]
+ },
+ {
+    "name": "GCE Vectrex",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/vectrex/",
+    "romExtensions": ["vec"]
+ },
+ {
+    "name": "Magnavox Odyssey 2",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/videopac/",
+    "romExtensions": ["bin"],
+    "bios": ["o2rom.bin"]
+ },
+ {
+    "name": "Mattel Intellivision",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/intellivision/",
+    "romExtensions": ["zip"],
+    "bios": ["exec.bin", "grom.bin"]
+ },
+ {
+    "name": "Microsoft MSX",
+    "type": "system",
+    "category": "Computers",
+    "folder": "/home/pi/RetroPie/roms/msx/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC PC Engine",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/pcengine/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC PC Engine-CD",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/pcenginecd/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC SuperGrafx",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/supergrafx/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC TurboGrafx-16",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/tg16/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC TurboGrafx-CD",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/tgcd/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo 64",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/n64/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Famicom",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/famicom/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Famicom Disk System",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/fds/",
+    "romExtensions": ["zip"],
+    "bios": ["disksys.rom"]
+ },
+ {
+    "name": "Nintendo Game Boy",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/gb/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Game Boy Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/gbc/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Game Boy Advance",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/gba/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo NES",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/nes/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo SNES",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/snes/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Satellaview BSX",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/satellaview/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Super Famicom",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/sfc/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Virtual Boy",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/vb/",
+    "romExtensions": ["vb"]
+ },
+ {
+    "name": "Sega 32X",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/sega32x/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Game Gear",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/gamegear/",
+    "romExtensions": ["zip"]
+ }, 
+ {
+    "name": "Sega Genesis",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/genesis/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Mega Drive Japan",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/megadrive-japan/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Mark III",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/markiii/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega SG-1000",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/sg-1000/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Master System",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/mastersystem/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Master System Brazil",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "/home/pi/RetroPie/roms/tectoy/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "SNK Neo Geo Pocket",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/ngp/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "SNK Neo Geo Pocket Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "/home/pi/RetroPie/roms/ngpc/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "MAME 2003",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "/home/pi/RetroPie/roms/arcade/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "MAME 2010",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "/home/pi/RetroPie/roms/arcade/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Final Burn Alpha",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "/home/pi/RetroPie/roms/fba/",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "SNK Neo Geo MVS",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "/home/pi/RetroPie/roms/neogeo/",
+    "romExtensions": ["zip"],
+    "bios": ["neogeo.zip"]
+ },
+ {
+    "name": "Addams Family Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-addams.cfg"
+ },
+ {
+    "name": "Batman Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-batman.cfg"
+ },
+ {
+    "name": "Castlevania Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-castlevania.cfg"
+},
+{
+   "name": "Disney Collection",
+   "type": "collection",
+   "category": "Collections",
+   "collection": "custom-disney.cfg"
+}
+
+
+]

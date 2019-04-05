@@ -1,0 +1,793 @@
+[
+{
+    "name": "Amstrad CPC",
+    "type": "system",
+    "category": "Computers",
+    "folder": "amstradcpc",
+    "romExtensions": ["zip"]
+},
+{
+    "name": "Atari 2600",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "atari2600",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari 5200",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "atari5200",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari 7800",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "atari7800",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Atari Lynx",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "atarilynx",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Sufami Turbo",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "sufami",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Wonderswan",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "wonderswan",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Bandai Wonderswan Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "wonderswancolor",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Coleco Colecovision",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "coleco",
+    "romExtensions": ["zip"],
+    "bios": ["coleco.rom"]
+ },
+ {
+    "name": "Commodore Amiga",
+    "type": "system",
+    "category": "Computers",
+    "folder": "amiga",
+    "romExtensions": ["zip"],
+    "bios": ["kick13.rom","kick20.rom","kick31.rom"]
+ },
+  
+ {
+    "name": "Game & Watch",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "gameandwatch",
+    "romExtensions": ["mgw"]
+ },
+ {
+    "name": "GCE Vectrex",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "vectrex",
+    "romExtensions": ["vec"]
+ },
+ {
+    "name": "Magnavox Odyssey 2",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "videopac",
+    "romExtensions": ["bin"],
+    "bios": ["o2rom.bin"]
+ },
+ {
+    "name": "Mattel Intellivision",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "intellivision",
+    "romExtensions": ["zip"],
+    "bios": ["exec.bin", "grom.bin"]
+ },
+ {
+    "name": "Microsoft MSX",
+    "type": "system",
+    "category": "Computers",
+    "folder": "msx",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Microsoft MSX2",
+    "type": "system",
+    "category": "Computers",
+    "folder": "msx2",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Microsoft MSX2+",
+    "type": "system",
+    "category": "Computers",
+    "folder": "msx2+",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC PC Engine",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "pcengine",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC PC Engine-CD",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "pcenginecd",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC SuperGrafx",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "supergrafx",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC TurboGrafx-16",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "tg16",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "NEC TurboGrafx-CD",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "tgcd",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo 64",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "n64",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Famicom",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "famicom",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Famicom Disk System",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "fds",
+    "romExtensions": ["zip"],
+    "bios": ["disksys.rom"]
+ },
+ {
+    "name": "Nintendo Game Boy",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "gb",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Game Boy Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "gbc",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Game Boy Advance",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "gba",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo NES",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "nes",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo NES Hacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "nes",
+    "subfolder": "#hacks",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo SNES",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "snes",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Satellaview BSX",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "satellaview",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Super Famicom",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "sfc",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Nintendo Virtual Boy",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "virtualboy",
+    "romExtensions": ["vb"]
+ },
+ {
+    "name": "Panasonic 3DO",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "3do",
+    "romExtensions": ["iso"]
+ },
+ {
+    "name": "Sega 32X",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "sega32x",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Game Gear",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "gamegear",
+    "romExtensions": ["zip"]
+ }, 
+ {
+    "name": "Sega Genesis",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "genesis",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Mega Drive Japan",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "megadrive-japan",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Mark III",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "markiii",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega SG-1000",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "sg-1000",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Master System",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "mastersystem",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sega Master System Brazil",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "mastersystem",
+    "subfolder": "#tectoy",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Samsung Gamboy",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "mastersystem",
+    "subfolder": "#gamboy",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "SNK Neo Geo Pocket",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "ngp",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "SNK Neo Geo Pocket Color",
+    "type": "system",
+    "category": "Handhelds",
+    "folder": "ngpc",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Sony Playstation",
+    "type": "system",
+    "category": "Consoles",
+    "folder": "psx",
+    "romExtensions": ["pbp"]
+ },
+ {
+    "name": "MAME 2003",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "arcade",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "lr-mame2003",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "arcade",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "MAME 2010",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "arcade",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "lr-mame2010",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "arcade",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "Final Burn Alpha",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "fba",
+    "romExtensions": ["zip"]
+ },
+ {
+    "name": "lr-fbalpha",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "arcade",
+    "romExtensions": ["zip"]
+ },
+
+ {
+    "name": "SNK Neo Geo MVS",
+    "type": "system",
+    "category": "Arcade",
+    "folder": "neogeo",
+    "romExtensions": ["zip"],
+    "bios": ["neogeo.zip"]
+ },
+ {
+    "name": "007 Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-007.cfg"
+ },
+
+ {
+    "name": "Addams Family Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-addams.cfg"
+ },
+ {
+    "name": "Alex Kidd Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-alexkidd.cfg"
+ },
+ {
+    "name": "Arkanoid Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-arkanoid.cfg"
+ },
+ {
+    "name": "Art of Fighting Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-aof.cfg"
+ },
+ {
+    "name": "Asteroids Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-asteroids.cfg"
+ },
+
+ {
+    "name": "Batman Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-batman.cfg"
+ },
+ {
+    "name": "Bomberman Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-bomberman.cfg"
+ },
+ {
+    "name": "Castlevania Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-castlevania.cfg"
+},
+{
+   "name": "Disney Collection",
+   "type": "collection",
+   "category": "Collections",
+   "collection": "custom-disney.cfg"
+},
+{
+    "name": "Donkey Kong Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-donkeykong.cfg"
+ },
+ {
+    "name": "Double Dragon Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-doubledragon.cfg"
+ },
+ {
+    "name": "Fatal Fury Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-fatalfury.cfg"
+ },
+ 
+ {
+    "name": "Final Fantasy Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-finalfantasy.cfg"
+ },
+ {
+    "name": "Frogger Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-frogger.cfg"
+ },
+ {
+    "name": "Kids Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-kids.cfg"
+ },
+ {
+    "name": "King Of Fighters Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-kof.cfg"
+ },
+ {
+    "name": "Lego Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-lego.cfg"
+ },
+ 
+ {
+    "name": "Mario Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-mario.cfg"
+ },
+ {
+    "name": "Mega Man Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-megaman.cfg"
+ },
+ {
+    "name": "Metal Slug Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-metalslug.cfg"
+ },
+ {
+    "name": "Metroid Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-metroid.cfg"
+ },
+ 
+ {
+    "name": "Mortal Kombat Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-mortalkombat.cfg"
+ },
+ {
+    "name": "Pacman Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-pacman.cfg"
+ },
+ {
+    "name": "Pokemon Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-pokemon.cfg"
+ },
+ {
+    "name": "Simpsons Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-simpsons.cfg"
+ },
+ 
+ {
+    "name": "Sonic Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-sonic.cfg"
+ },
+ {
+    "name": "Space Invaders Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-spaceinvaders.cfg"
+ },
+ {
+    "name": "Spiderman Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-spiderman.cfg"
+ },
+ 
+ {
+    "name": "Star Wars Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-starwars.cfg"
+ },
+ {
+    "name": "Street Fighter Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-streetfighter.cfg"
+ },
+ {
+    "name": "TMNT Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-tmnt.cfg"
+ },
+ {
+    "name": "Wonderboy Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-wonderboy.cfg"
+ },
+ 
+ {
+    "name": "Zelda Collection",
+    "type": "collection",
+    "category": "Collections",
+    "collection": "custom-zelda.cfg"
+ },
+ 
+ {
+    "name": "Alpha Denshi Co",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-alpha.cfg"
+},
+{
+    "name": "Atari Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-atari.cfg"
+},
+{
+    "name": "Atlus Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-atlus.cfg"
+},
+{
+    "name": "Banpresto Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-banpresto.cfg"
+},
+{
+    "name": "Beatemup Arcade",
+    "type": "collection",
+    "category": "Beatemup",
+    "collection": "custom-beatemup.cfg"
+},
+{
+    "name": "Capcom Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-capcom.cfg"
+},
+{
+    "name": "Arcade Old School",
+    "type": "collection",
+    "category": "Arcade",
+    "collection": "custom-aos.cfg"
+},
+{
+    "name": "Cave",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-cave.cfg"
+},
+{
+    "name": "Data East Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-dataeast.cfg"
+},
+{
+    "name": "Irem Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-irem.cfg"
+},
+{
+    "name": "Jaleco Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-jaleco.cfg"
+},
+{
+    "name": "Kaneko Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-kaneko.cfg"
+},
+{
+    "name": "Konami Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-konami.cfg"
+},
+{
+    "name": "Midway Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-midway.cfg"
+},
+{
+    "name": "Namco Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-namco.cfg"
+},
+{
+    "name": "Nintendo Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-nintendo.cfg"
+},
+
+{
+    "name": "Sega Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-sega.cfg"
+},
+{
+    "name": "Taito Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-taito.cfg"
+},
+{
+    "name": "Tecmo Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-tecmo.cfg"
+},
+{
+    "name": "Toaplan Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-toaplan.cfg"
+},
+{
+    "name": "Visco Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-visco.cfg"
+},
+{
+    "name": "Williams Classics",
+    "type": "collection",
+    "category": "Arcade Manufacturer",
+    "collection": "custom-williams.cfg"
+},
+{
+    "name": "Shmups Arcade",
+    "type": "collection",
+    "category": "Arcade",
+    "collection": "custom-shmups.cfg"
+},
+{
+    "name": "Sega Genesis Hacks",
+    "type": "collection",
+    "category": "Hacks",
+    "folder": "genesis",
+    "subfolder": "#hacks"
+},
+{
+    "name": "SMW-Hacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "snes",
+    "subfolder": "#smw-hacks"
+},
+{
+    "name": "Sonic Hacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "genesis",
+    "subfolder": "#sonic-hacks"
+},
+{
+    "name": "SORHacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "genesis",
+    "subfolder": "#sor-hacks"
+},
+{
+    "name": "Nintendo SNES Hacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "snes",
+    "subfolder": "#hacks"
+},
+{
+    "name": "Super Metroid Hacks",
+    "type": "system",
+    "category": "Hacks",
+    "folder": "snes",
+    "subfolder": "#metroid-hacks"
+}
+
+
+
+
+
+
+
+
+]

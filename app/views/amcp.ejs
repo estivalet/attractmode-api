@@ -444,6 +444,7 @@ function renderMissingTable(data) {
         row.insertCell(2).outerHTML = "<th>Available</th>";
         row.insertCell(3).outerHTML = "<th>Favorite</th>";
         row.insertCell(4).outerHTML = "<th>Media</th>";
+        row.insertCell(5).outerHTML = "<th>PC Status</th>";
 //        for(var i=0; i < data[0].artwork.length; i++) {
   //        row.insertCell(i+4).outerHTML = "<th>" + data[0].artwork[i].type + "</th>";
     //    }
@@ -588,6 +589,48 @@ function renderMissingTable(data) {
             textSpan.className = "hide";
             td.appendChild(textSpan);
             tr.appendChild(td);
+
+          // PC Status column.
+          var array = ["","OK","NOK"];
+          var pcStatusList = document.createElement("select");
+          pcStatusList.id = element.name;
+          for (var i = 0; i < array.length; i++) {
+              var option = document.createElement("option");
+              option.value = array[i];
+              option.text = array[i];
+              pcStatusList.appendChild(option);
+          }
+          pcStatusList.value = element.pcStatus;
+          pcStatusList.addEventListener("change", function() {
+            $.ajax({
+                url: "/attract/game/status",
+                type: "POST",
+                data: {
+                  game: this.id,
+                  PCStatus: this.value,
+                  emulator: element.emulator
+                },
+                complete: function() {
+                  //called when complete
+                  console.log('process complete');
+                },
+
+                success: function(data) {
+                  console.log(data);
+                  console.log('process sucess');
+              },
+
+                error: function() {
+                  console.log('process error');
+                },
+              });
+
+
+          }); 
+          var td = document.createElement('TD');
+          td.appendChild(pcStatusList);
+          tr.appendChild(td);
+
 
         });
 

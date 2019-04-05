@@ -139,6 +139,17 @@ exports.box = function(req, res) {
     });
 };
 
-
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ */
+exports.gameStatus = function(req, res) {
+    const emuparser = require('../tools/emulator-parser');
+    config = emuparser.parseEmulatorConfig(attract.HOME + '/emulators/' + req.body.emulator + '.cfg');
+    emuparser.updateMetadata(req.body, config);
+    res.setHeader('Content-Type', 'application/json');
+    res.send({"msg":"OK"});
+}
 
 exports.getCollection = getCollection;

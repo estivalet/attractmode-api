@@ -61,13 +61,34 @@ exports.checkAvailability = (romlistEntry, config) => {
  * @param {*} config 
  */
 exports.addMetadata  = (romlistEntry, config) => {
-    var metadataFile = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/") + "/database/" + romlistEntry.name + ".json";
+    var metadataFile = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/") + "/metadata/" + romlistEntry.name + ".json";
     if(fs.existsSync(metadataFile)) {
         var json = JSON.parse(fs.readFileSync(metadataFile, "utf-8"));
         romlistEntry.description = json.description;
         romlistEntry.genre = json.genre;
         romlistEntry.publisher = json.publisher;
+        romlistEntry.pcStatus = json.pcStatus;
     }
+}
+
+exports.updateMetadata  = (data, config) => {
+    var dir = attract.GLOG + "/" + config["rompath"].replace(/[..]/g,"").replace(/\\\\/g,"").replace(/\\/g,"/") + "/metadata/";
+    if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+    var metadataFile = dir + data.game + ".json";
+    console.log("file-->" + metadataFile);
+    var json = {};
+    if(fs.existsSync(metadataFile)) {
+        var json = JSON.parse(fs.readFileSync(metadataFile, "utf-8"));
+        console.log("JSON");
+        console.log(json);
+    }
+    json["name"] = data.game;
+    json["pcStatus"] = data.PCStatus;
+    console.log("JSON2");
+    console.log(json);
+    fs.writeFileSync(metadataFile, JSON.stringify(json));
 }
 
 /**
