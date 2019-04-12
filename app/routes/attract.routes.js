@@ -8,14 +8,12 @@ router.get('/attract/collection/:collection', attract.getCollection);
 
 router.get('/attract/categories/all', attract.getCategories);
 
-router.get('/system/:systemName/attract', attract.attract);
+router.get('/attract/games/:systemName', attract.attract);
 
 router.get('/attract/system/:systemName', attract.showSystem);
 
 // example: http://localhost:3002/attract/offline/Consoles
 router.get('/attract/offline/:category', attract.offline);
-
-router.get('/box', attract.box);
 
 router.get('/', attract.index);
 

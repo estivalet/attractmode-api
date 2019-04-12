@@ -418,10 +418,9 @@ function renderMissingTable(data) {
 
     function loadSystem(system) {
 
-    console.log("/system/" + system + "/attract");
     openModal();
     $.ajax({
-      url : "/system/" + system + "/attract",
+      url : "/attract/games/" + system,
       success : function(data) {
         renderMissingTable(data);
         var counters = [];
