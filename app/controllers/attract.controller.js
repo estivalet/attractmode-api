@@ -26,7 +26,16 @@ exports.getRomlist = (req, res) => {
 
 exports.getCategories = (req, res) => {
     const parser = require('../tools/romlist-parser');
-    res.send(parser.parseCategories(attract.HOME + '/romlists/' + 'GLOG_Categories.txt'));
+    
+    //console.log(parser.parseCategories(attract.HOME + '/romlists/' + 'GLOG_Categories.txt'));
+    //res.send(parser.parseCategories(attract.HOME + '/romlists/' + 'GLOG_Categories.txt'));
+    let systems = parser.parseCategories(attract.HOME + '/romlists/' + 'GLOG_Systems.txt');
+    systems.push('------');
+    let categories = parser.parseCategories(attract.HOME + '/romlists/' + 'GLOG_Collections.txt');
+    for(i=0; i < categories.length; i++) {
+        systems.push(categories[i]);
+    }
+    res.send(systems);
 };
 
 async function parseRomlist(romlist) {
@@ -63,6 +72,8 @@ exports.index = function(req, res) {
             });    
         },
     }, function(err, results){
+        console.log('--------');
+        console.log(results);
         if(err) {
             res.render('error', { message: JSON.parse(results.systems)});
         } else {

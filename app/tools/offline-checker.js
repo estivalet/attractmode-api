@@ -16,7 +16,7 @@ let systems = JSON.parse(rawdata);
 for(var r=0; r < systems.length; r++) {
     // Check only the systems that I have added a category in the spreadsheet.
     //if(systems[r]["category"] != "") {
-    if(systems[r]["category"] == "Arcade Manufacturer") {
+    if(systems[r]["category"] == "Consoles") {
         console.log("Processing "  + systems[r]["system"]);
         // Replace "&" for Game & Watch for example.
         let path = attract.HOME + '/romlists/' + systems[r]["system"].replace(/&amp;/g, "&") + '.txt';
