@@ -122,7 +122,8 @@
                       <% for (var i = 0; i < categories.length; i++) { %>
                           <option value="<%=categories[i]%>"><%=categories[i]%></option>
                       <%}%>    
-                  </select>            
+                  </select>
+                  <p><div style='color:white'>Total Games: <span id="total-category" class="total">0</span></div></p>
                 </ul>
                 <ul class="sidebar-menu" id="sidebar-menu">
                   <li>
@@ -409,9 +410,12 @@ function renderMissingTable(data) {
         url : "http://localhost:3002/attract/collection/" + this.value,
         success : function(data) {
           $("#sidebar-menu").empty();
+          totalCategory = 0;
           $.each(data, function(index, element) {
             $("#sidebar-menu").append("<li style=\"border-bottom:1px solid #404040\"><a href=\"#\" onclick=\"loadSystem(" + "'" + Object.keys(element)[0] + "')\"><span style=\"color:white\">" + Object.keys(element)[0] + "</span> <span class=\"total\">" + element[Object.keys(element)[0]] + "</span></a></li>");
+            totalCategory += element[Object.keys(element)[0]];
           });
+          document.getElementById("total-category").innerHTML = totalCategory;
         }
       });
     });
